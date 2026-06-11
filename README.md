@@ -19,7 +19,20 @@ each developer gets its own git worktree on its own branch; reviewers look
 at branches with fresh eyes. The team adds and removes teammates itself
 with two skills: `spawn-instance` and `retire-instance`.
 
-## Use it
+## Fastest path: one command
+
+```bash
+git clone https://github.com/awebai/aweb-team-dev-simple.git
+cd /path/to/your/repo
+AWEB_API_KEY=...  ../aweb-team-dev-simple/scripts/create-team.py .
+```
+
+It asks how many of each soul you want (and a hosted username if there is
+no `AWEB_API_KEY` in the environment), then installs the resources, creates
+every identity with explicit `aw` commands shown as they run, and prints
+the launch command for each instance. A whole team takes seconds.
+
+## Or: agent-driven
 
 In your repo, tell your agent:
 

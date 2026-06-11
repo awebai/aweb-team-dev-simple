@@ -28,5 +28,8 @@ git -C "$REPO" worktree prune
 ```
 
 Use `aw workspace delete`, **not** `aw id team leave` — leave refuses an
-identity's only team. If the instance died before cleanup, remove the stale
-member via the dashboard.
+identity's only team. If it answers 409 "Workspace is still active", the
+service hasn't marked it stale yet: wait and retry before removing the
+local directory — **never delete the home while the server still considers
+the member active**, or it orphans in the roster. If the instance died
+before cleanup, remove the stale member via the dashboard.

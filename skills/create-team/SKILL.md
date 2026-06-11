@@ -10,6 +10,13 @@ identity-free resources in, commit them, connect the coordinator, publish
 the shared context, hand the team to the human. You are a transient
 creator — **you will have no role in the finished team.**
 
+**Fast path:** `scripts/create-team.py <target>` performs this whole
+procedure in one go (it prompts for counts and team source, shows every
+`aw` command it runs, and prints launch commands). Prefer it when the human
+wants the standard setup; follow the manual steps below when they want to
+adapt anything along the way. Either way, review and commit with the human
+at the end.
+
 Do not: create `.aw` state in this blueprint repo; copy `.aw`, keys,
 certificates, tokens, or aliases from anywhere; overwrite existing target
 paths without asking; create worktrees or branches now; run any monolithic
