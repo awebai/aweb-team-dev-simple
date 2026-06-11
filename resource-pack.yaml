@@ -1,0 +1,24 @@
+schema_version: 1
+name: simple-dev-team
+summary: The simplest coordinator/developer/reviewer team — add and remove worktree teammates with new identities, nothing else prescribed.
+resources:
+  instructions: resources/instructions.md
+  roles:
+    coordinator: resources/roles/coordinator.md
+    developer: resources/roles/developer.md
+    reviewer: resources/roles/reviewer.md
+  souls:
+    coordinator: resources/souls/coordinator
+    developer: resources/souls/developer
+    reviewer: resources/souls/reviewer
+  docs:
+    team-architecture: resources/docs/team-architecture.md
+skills:
+  - skills/create-team/SKILL.md
+  - skills/spawn-instance/SKILL.md
+  - skills/retire-instance/SKILL.md
+  - skills/self-maintenance/SKILL.md
+adapters:
+  claude: adapters/claude/README.md
+  codex: adapters/codex/README.md
+  pi: adapters/pi/README.md
